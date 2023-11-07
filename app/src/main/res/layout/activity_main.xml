@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#773F51B5"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/insertButton"
+        style="@android:style/Widget.Material.Light.Button.Inset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:text="@string/insert"
+        app:layout_constraintBottom_toTopOf="@+id/queryButton"
+        app:layout_constraintEnd_toEndOf="@+id/pricetext"
+        app:layout_constraintStart_toEndOf="@+id/pricetext" />
+
+    <Button
+        android:id="@+id/updateButton"
+        style="@android:style/Widget.Material.Light.Button.Inset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="79dp"
+        android:text="@string/update"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/numberTV"
+        app:layout_constraintTop_toBottomOf="@+id/priceinput" />
+
+    <Button
+        android:id="@+id/queryButton"
+        style="@android:style/Widget.Material.Light.Button.Inset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="22dp"
+        android:text="@string/query"
+        app:layout_constraintStart_toStartOf="@+id/unique_id"
+        app:layout_constraintTop_toBottomOf="@+id/updateButton" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        style="@android:style/Widget.Material.Light.Button.Inset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:text="@string/delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/nextButton"
+        style="@android:style/Widget.Material.Light.Button.Inset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="28dp"
+        android:text="@string/next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/previousButton" />
+
+    <Button
+        android:id="@+id/previousButton"
+        style="@android:style/Widget.Material.Light.Button.Inset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="22dp"
+        android:text="@string/previous"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/insertButton" />
+
+    <EditText
+        android:id="@+id/nameinput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:hint="enter a name..."
+        app:layout_constraintBottom_toTopOf="@+id/numbertext"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <requestFocus
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </EditText>
+
+    <EditText
+        android:id="@+id/numberinput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="enter a number..."
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/nameinput"
+        app:layout_constraintTop_toBottomOf="@+id/nameinput" />
+
+    <TextView
+        android:id="@+id/unique_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="38dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toTopOf="@+id/fandomTV"
+        app:layout_constraintEnd_toStartOf="@+id/numberTV"
+        app:layout_constraintStart_toStartOf="@+id/numberTV" />
+
+    <TextView
+        android:id="@+id/nameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toTopOf="@+id/typeTV"
+        app:layout_constraintEnd_toEndOf="@+id/queryButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/queryButton" />
+
+    <TextView
+        android:id="@+id/numberTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="22dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="@+id/insertButton"
+        app:layout_constraintStart_toEndOf="@+id/pricetext"
+        app:layout_constraintTop_toBottomOf="@+id/unique_id" />
+
+    <TextView
+        android:id="@+id/nametext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="20dp"
+        android:text="Name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toStartOf="@+id/nameinput"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/numbertext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="18dp"
+        android:text="Number"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toStartOf="@+id/numberinput"
+        app:layout_constraintTop_toBottomOf="@+id/nametext" />
+
+    <TextView
+        android:id="@+id/typetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="20dp"
+        android:text="Type"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toTopOf="@+id/fandomtext"
+        app:layout_constraintEnd_toEndOf="@+id/numbertext" />
+
+    <TextView
+        android:id="@+id/fandomtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:text="Fandom"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toTopOf="@+id/oninput"
+        app:layout_constraintEnd_toStartOf="@+id/typetext"
+        app:layout_constraintStart_toStartOf="@+id/typetext" />
+
+    <TextView
+        android:id="@+id/ontext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="20dp"
+        android:text="on"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toTopOf="@+id/ultimatetext"
+        app:layout_constraintStart_toStartOf="@+id/ultimatetext" />
+
+    <TextView
+        android:id="@+id/ultimatetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="35dp"
+        android:text="Ultimate"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toTopOf="@+id/priceinput"
+        app:layout_constraintEnd_toStartOf="@+id/ultimateinput" />
+
+    <EditText
+        android:id="@+id/typeinput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:ems="10"
+        android:hint="enter a type..."
+        app:layout_constraintBottom_toTopOf="@+id/typetext"
+        app:layout_constraintStart_toStartOf="@+id/numberinput"
+        app:layout_constraintTop_toTopOf="@+id/typetext" />
+
+    <EditText
+        android:id="@+id/fandominput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:ems="10"
+        android:hint="enter a fandom..."
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/typeinput"
+        app:layout_constraintTop_toTopOf="@+id/typeinput" />
+
+    <EditText
+        android:id="@+id/oninput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/ontext"
+        app:layout_constraintStart_toStartOf="@+id/fandominput"
+        app:layout_constraintTop_toTopOf="@+id/ontext" />
+
+    <EditText
+        android:id="@+id/ultimateinput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:ems="10"
+        android:hint="enter an ultimate..."
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/ultimatetext"
+        app:layout_constraintStart_toStartOf="@+id/oninput"
+        app:layout_constraintTop_toTopOf="@+id/ultimatetext" />
+
+    <EditText
+        android:id="@+id/priceinput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="231dp"
+        android:layout_marginBottom="230dp"
+        android:ems="10"
+        android:hint="enter a price..."
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/numberTV"
+        app:layout_constraintStart_toStartOf="@+id/ultimateinput"
+        app:layout_constraintTop_toTopOf="@+id/nametext"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/pricetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:text="Price"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="@+id/ultimatetext"
+        app:layout_constraintTop_toBottomOf="@+id/ultimatetext" />
+
+    <TextView
+        android:id="@+id/typeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/onTV"
+        app:layout_constraintEnd_toStartOf="@+id/nameTV"
+        app:layout_constraintStart_toStartOf="@+id/nameTV" />
+
+    <TextView
+        android:id="@+id/fandomTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/priceTV"
+        app:layout_constraintEnd_toStartOf="@+id/unique_id"
+        app:layout_constraintStart_toStartOf="@+id/unique_id" />
+
+    <TextView
+        android:id="@+id/priceTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/deleteButton"
+        app:layout_constraintEnd_toStartOf="@+id/fandomTV"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/fandomTV" />
+
+    <TextView
+        android:id="@+id/onTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/ultimateTV"
+        app:layout_constraintEnd_toStartOf="@+id/typeTV"
+        app:layout_constraintStart_toStartOf="@+id/typeTV" />
+
+    <TextView
+        android:id="@+id/ultimateTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/deleteButton"
+        app:layout_constraintEnd_toStartOf="@+id/onTV"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/onTV" />
+
+    <TextView
+        android:id="@+id/textView10"
+        style="@style/Widget.AppCompat.TextView.SpinnerItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="9dp"
+        android:text="Add to FunkoPOP Database"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/nameinput"
+        app:layout_constraintStart_toStartOf="@+id/nametext" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
